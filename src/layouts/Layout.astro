@@ -1,0 +1,100 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Portfolio personal" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav-content">
+				<a href="/" class="logo">Portfolio</a>
+				<div class="nav-links">
+					<a href="#projects">Proyectos</a>
+					<a href="#about">Sobre Mí</a>
+					<a href="#contact">Contacto</a>
+				</div>
+			</div>
+		</nav>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		scroll-behavior: smooth;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		color: white;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	.nav {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background: rgba(19, 21, 26, 0.8);
+		backdrop-filter: blur(10px);
+		z-index: 1000;
+	}
+	.nav-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.logo {
+		color: white;
+		text-decoration: none;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+	}
+	.nav-links a {
+		color: white;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+	.nav-links a:hover {
+		color: rgb(var(--accent-light));
+	}
+</style>

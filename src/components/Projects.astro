@@ -1,0 +1,93 @@
+---
+const projects = [
+	{
+		title: "Proyecto 1",
+		description: "Descripción del proyecto 1",
+		tech: ["React", "Node.js", "MongoDB"],
+		image: "/project1.jpg",
+		link: "#"
+	},
+	{
+		title: "Proyecto 2",
+		description: "Descripción del proyecto 2",
+		tech: ["Vue", "Express", "PostgreSQL"],
+		image: "/project2.jpg",
+		link: "#"
+	}
+];
+---
+
+<section id="projects" class="projects">
+	<h2>Mis Proyectos</h2>
+	<div class="project-grid">
+		{projects.map(project => (
+			<article class="project-card">
+				<h3>{project.title}</h3>
+				<p>{project.description}</p>
+				<div class="tech-stack">
+					{project.tech.map(tech => <span class="tech-tag">{tech}</span>)}
+				</div>
+				<a href={project.link} class="project-link">Ver proyecto</a>
+			</article>
+		))}
+	</div>
+</section>
+
+<style>
+	.projects {
+		padding: 4rem 2rem;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.project-card {
+		background: rgba(var(--accent-dark), 0.2);
+		border-radius: 8px;
+		padding: 1.5rem;
+		transition: transform 0.3s ease;
+	}
+
+	.project-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.tech-stack {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		margin: 1rem 0;
+	}
+
+	.tech-tag {
+		background: rgba(var(--accent-light), 0.1);
+		padding: 0.3rem 0.8rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+	}
+
+	.project-link {
+		display: inline-block;
+		background: rgb(var(--accent));
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		text-decoration: none;
+		transition: background 0.3s ease;
+	}
+
+	.project-link:hover {
+		background: rgb(var(--accent-light));
+	}
+</style>
