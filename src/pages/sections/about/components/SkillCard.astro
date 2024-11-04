@@ -1,0 +1,44 @@
+---
+interface Props {
+  skills: Array<{ name: string }>;
+  level: string;
+}
+
+const { skills, level } = Astro.props;
+---
+<div class="skill-card">
+  <h4>{level}</h4>
+  <ul class="skills-list">
+    {skills.map(skill => (
+      <li class="skill-item">{skill.name}</li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .skill-card {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(var(--accent-dark), 0.2);
+    border-radius: 8px;
+  }
+
+  .skill-card h4 {
+    color: rgb(var(--accent-light));
+    margin-bottom: 0.5rem;
+  }
+
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .skill-item {
+    background: rgba(var(--accent-light), 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+  }
+</style>

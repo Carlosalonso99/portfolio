@@ -1,0 +1,41 @@
+---
+import SkillsSection from "../components/SkillSection.astro";
+
+interface Props {
+  description: string;
+}
+
+const { description } = Astro.props;
+---
+<section id="about" class="about">
+  <div class="container">
+    <h2>Sobre Mí</h2>
+    <div class="content">
+      <div class="text">
+        <p>{description}</p>
+        <SkillsSection />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 4rem 2rem;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .content {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+</style>

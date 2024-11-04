@@ -1,0 +1,7 @@
+---
+import AboutLayout from "./layout/AboutLayout.astro";
+import { getDescription } from "../../../lib/dataAdapter"
+
+const description = getDescription();
+---
+<AboutLayout description= { description.description } />

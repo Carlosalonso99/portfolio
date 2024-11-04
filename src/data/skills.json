@@ -1,0 +1,14 @@
+{
+    "skills": [
+      { "name": "HTML", "level": "Básico", "type": "Desarrollo" },
+      { "name": "CSS", "level": "Básico", "type": "Desarrollo" },
+      { "name": "JavaScript", "level": "Medio", "type": "Desarrollo" },
+      { "name": "React", "level": "Medio", "type": "Desarrollo" },
+      { "name": "Vue", "level": "Medio", "type": "Desarrollo" },
+      { "name": "Astro", "level": "Medio", "type": "Desarrollo" },
+      { "name": "Node.js", "level": "Avanzado", "type": "Desarrollo" },
+      { "name": "Express", "level": "Avanzado", "type": "Desarrollo" },
+      { "name": "MongoDB", "level": "Avanzado", "type": "Big Data" },
+      { "name": "PostgreSQL", "level": "Avanzado", "type": "Big Data" }
+    ]
+  }

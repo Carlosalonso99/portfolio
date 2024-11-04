@@ -1,0 +1,50 @@
+---
+import { getSkillTypes, getSkillsByTypeAndLevel } from "../../../../lib/dataAdapter";
+import SkillCard from "./SkillCard.astro";
+
+const skillTypes = getSkillTypes();
+---
+<div class="skills-section">
+  {skillTypes.map(type => (
+    <div class="skills-row" key={type}>
+      <h3 class="skills-type-title">{type}</h3>
+      <div class="skills-level-cards">
+        {getSkillsByTypeAndLevel(type, "Básico").length > 0 && (
+          <SkillCard level="Básico" skills={getSkillsByTypeAndLevel(type, "Básico")} />
+        )}
+        {getSkillsByTypeAndLevel(type, "Medio").length > 0 && (
+          <SkillCard level="Medio" skills={getSkillsByTypeAndLevel(type, "Medio")} />
+        )}
+        {getSkillsByTypeAndLevel(type, "Avanzado").length > 0 && (
+          <SkillCard level="Avanzado" skills={getSkillsByTypeAndLevel(type, "Avanzado")} />
+        )}
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .skills-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills-type-title {
+    font-size: 1.5rem;
+    color: rgb(var(--accent-light));
+    margin-bottom: 1rem;
+  }
+
+  .skills-level-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+</style>

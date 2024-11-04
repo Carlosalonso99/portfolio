@@ -1,0 +1,26 @@
+---
+import ProjectsLayout from "./layout/ProjectsLayout.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+<section id="projects" class="projects">
+  <div class="container">
+    <h2>{title}</h2>
+    <ProjectsLayout />
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding: 4rem 2rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+</style>

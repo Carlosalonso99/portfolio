@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Proyecto 1",
+      "description": "Descripción del proyecto 1",
+      "tech": ["React", "Node.js", "MongoDB"],
+      "image": "/project1.jpg",
+      "link": "#"
+    },
+    {
+      "title": "Proyecto 2",
+      "description": "Descripción del proyecto 2",
+      "tech": ["Vue", "Express", "PostgreSQL"],
+      "image": "/project2.jpg",
+      "link": "#"
+    }
+  ]
+  
