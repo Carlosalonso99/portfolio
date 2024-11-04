@@ -49,7 +49,7 @@ Si deseas clonar el proyecto y probarlo en tu máquina local, sigue estos pasos:
 ## 📧 Contacto
 Si quieres saber más o colaborar conmigo en algún proyecto, no dudes en contactarme:
 - **Email**: carlosalonsomingo@gmail.com
-- **LinkedIn**: [Mi perfil]([https://linkedin.com/in/tu-perfil](https://www.linkedin.com/in/carlosalonsoia/)
+- **LinkedIn**: [[Mi perfil]([[https://linkedin.com/in/tu-perfil](https://www.linkedin.com/in/carlosalonsoia/)]()]
 
 ¡Gracias por visitar mi portfolio! Espero que encuentres el proyecto interesante y que te inspire a utilizar **Astro** en tus propios desarrollos.
 
