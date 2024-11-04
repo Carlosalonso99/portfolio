@@ -45,16 +45,11 @@ Si deseas clonar el proyecto y probarlo en tu máquina local, sigue estos pasos:
 - **Conexión a una base de datos**: Migrar de JSON a una base de datos real para manejar los datos del portfolio.
 - **Mejoras en el SEO**: Optimizar el contenido del sitio para mejorar el rendimiento en buscadores.
 
-## 🤝 Contribuciones
-¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, puedes hacer un fork del repositorio y enviar un pull request con tus cambios.
-
-## 📝 Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
 ## 📧 Contacto
 Si quieres saber más o colaborar conmigo en algún proyecto, no dudes en contactarme:
-- **Email**: tu@email.com
-- **LinkedIn**: [Mi perfil](https://linkedin.com/in/tu-perfil)
+- **Email**: carlosalonsomingo@gmail.com
+- **LinkedIn**: [Mi perfil]([https://linkedin.com/in/tu-perfil](https://www.linkedin.com/in/carlosalonsoia/)
 
 ¡Gracias por visitar mi portfolio! Espero que encuentres el proyecto interesante y que te inspire a utilizar **Astro** en tus propios desarrollos.
 
